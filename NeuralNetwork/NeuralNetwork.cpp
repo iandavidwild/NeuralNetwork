@@ -45,6 +45,18 @@ int main()
     cout << p->run({ 1,1 }) << endl;
     cout << endl;
 
+    // XOR Example using 4 NANDS
+    MultiLayerPerceptron mlp = MultiLayerPerceptron({ 2, 2, 1 }); // 2 inputs and 2+1 neurons in the hidden layer.
+    mlp.set_weights({ {{-10,-10,15},{15,15,-10}}, {{10,10,-15}} });
+    cout << "Weights:\n";
+    mlp.print_weights();
+
+    cout << "XOR Gate: " << endl;
+    cout << "0 0 = " << mlp.run({ 0,0 })[0] << endl;
+    cout << "0 1 = " << mlp.run({ 0,1 })[0] << endl;
+    cout << "1 0 = " << mlp.run({ 1,0 })[0] << endl;
+    cout << "1 1 = " << mlp.run({ 1,1 })[0] << endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
