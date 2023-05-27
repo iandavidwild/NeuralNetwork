@@ -19,6 +19,7 @@ int main()
     cout << p->run({ 0,1 }) << endl;
     cout << p->run({ 1,0 }) << endl;
     cout << p->run({ 1,1 }) << endl;
+    cout << endl;
 
     p->set_weights({15,15,-10}); // OR
     cout << "OR Gate: " << endl;
@@ -26,6 +27,24 @@ int main()
     cout << p->run({ 0,1 }) << endl;
     cout << p->run({ 1,0 }) << endl;
     cout << p->run({ 1,1 }) << endl;
+    cout << endl;
+
+    p->set_weights({ -10,-10,15 }); // NAND
+    cout << "NAND Gate: " << endl;
+    cout << p->run({ 0,0 }) << endl;
+    cout << p->run({ 0,1 }) << endl;
+    cout << p->run({ 1,0 }) << endl;
+    cout << p->run({ 1,1 }) << endl;
+    cout << endl;
+
+    p->set_weights({ -15,-15,10 }); // NOR
+    cout << "OR Gate: " << endl;
+    cout << p->run({ 0,0 }) << endl;
+    cout << p->run({ 0,1 }) << endl;
+    cout << p->run({ 1,0 }) << endl;
+    cout << p->run({ 1,1 }) << endl;
+    cout << endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
